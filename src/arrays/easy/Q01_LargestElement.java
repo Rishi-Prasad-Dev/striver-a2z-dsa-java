@@ -23,9 +23,6 @@ public class Q01_LargestElement {
                 largest = arr[i];
             }
         }
-
         System.out.println(largest);
-
-        sc.close();
     }
 }

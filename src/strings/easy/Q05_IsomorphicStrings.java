@@ -18,21 +18,21 @@ public class Q05_IsomorphicStrings {
             return;
         }
 
-        HashMap<Character, Character> smap = new HashMap<>();
-        HashMap<Character, Character> tmap = new HashMap<>();
+        HashMap<Character, Character> sMap = new HashMap<>();
+        HashMap<Character, Character> tMap = new HashMap<>();
 
         for (int i = 0; i < s.length(); i++) {
 
             char sChar = s.charAt(i);
             char tChar = t.charAt(i);
 
-            if ((smap.containsKey(sChar) && smap.get(sChar) != tChar)
-                    || (tmap.containsKey(tChar) && tmap.get(tChar) != sChar)) {
+            if ((sMap.containsKey(sChar) && sMap.get(sChar) != tChar)
+                    || (tMap.containsKey(tChar) && tMap.get(tChar) != sChar)) {
                 isomorphic = false;
                 break;
             }
-            smap.put(sChar, tChar);
-            tmap.put(tChar, sChar);
+            sMap.put(sChar, tChar);
+            tMap.put(tChar, sChar);
         }
 
         if (isomorphic) {
